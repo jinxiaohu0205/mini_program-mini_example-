@@ -1,0 +1,39 @@
+<view class="section section_gap">
+  <view class="section__title">horizontal scroll</view>
+  <scroll-view class="scroll-view_H" scroll-x >
+    <view id="green" style='background:red;' class="scroll-view-ite m_H bc_green"></view>
+    <view id="red" class="scroll-view-item_H bc_red"></view>
+    <view id="yellow" class="scroll-view-item_H bc_yellow"></view>
+    <view id="blue" class="scroll-view-item_H bc_blue"></view>
+    <view id="blue" class="scroll-view-item_H bc_blue"></view>
+    <view id="blue" class="scroll-view-item_H bc_blue"></view>
+  </scroll-view>
+</view>
+
+<view class='box' style='overflow:scroll;'>
+  <view style='width:100rpx;height:100rpx;background:blue;'></view>
+  <view style='width:100rpx;height:100rpx;background:pink;'></view>
+  <view style='width:100rpx;height:100rpx;background:yellow;'></view>
+  <view style='width:100rpx;height:100rpx;background:blue;'></view>
+  <view style='width:100rpx;height:100rpx;background:pink;'></view>
+  <view style='width:100rpx;height:100rpx;background:yellow;'></view>
+</view>
+
+<!-- 可以出发转发 -->
+ <button open-type='share'>
+ share
+ </button>
+<form report-submit='true'>
+form
+</form>
+ <navigator url="/pages/logs/logs"  hover-class="navigator-hover">跳转到新页面</navigator> 
+
+<view wx:for='{{images}}' wx:key="*this">
+  <image class='iamges'  src='{{item}}' bindtap="handleImagePreview" data-idx='{{index}}'></image>
+</view>
+
+<input bindinput='bindinput' value='{{test}}'></input>
+
+<view aria-role="button"  aria-label="提交表单">提交</view>
+
+

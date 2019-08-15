@@ -1,0 +1,16 @@
+<view class="con">
+  <view class="box">
+    <!-- <view class="inner">你好</view> -->
+    <!-- <view class='inner2 inner'>nihoa </view> -->
+    <!-- <view class='inner3 inner'>jin</view> -->
+    <text class='inner4 inner'>hellow world！！</text>
+   
+  </view>
+  <image src='../../image/all2.png' bindtap='bindimg'></image>
+  <text>{{number}}</text>
+   <block wx:for="{{newlist}}" wx:key="*this  ">
+    <view>{{item.femalename}}</view>
+  </block >
+
+  <navigator url="/pages/question-ask/question-ask" hover-class="navigator-hover">跳转到新页面</navigator>
+</view>

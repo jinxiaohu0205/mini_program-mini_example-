@@ -1,0 +1,8 @@
+{
+  "usingComponents": {
+    "hello-component": "plugin://myPlugin/hello-component"
+  }
+{
+  "usingComponents": {
+    "hello-component": "plugin://myPlugin/hello-component"
+  }

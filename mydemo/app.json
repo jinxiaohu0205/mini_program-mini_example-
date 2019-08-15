@@ -1,0 +1,39 @@
+{
+  "pages": [
+    "pages/base64/question-ask",
+    "pages/demo/index",
+    "pages/scroll-viewtwo/scroll-viewtwo",
+    "pages/index/index",
+    "pages/map/index",
+    "pages/logs/logs"
+    
+   
+  ],
+  "window": {
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "WeChat",
+    "navigationBarTextStyle": "black"
+  },
+  "tabBar": {
+    "color": "#B3B3B3",
+    "selectedColor": "#454545",
+    "borderStyle": "white",
+    "backgroundColor": "#ffffff",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "index"
+      },
+      {
+        "pagePath": "pages/demo/index",
+        "text": "demo"
+      }
+    ]
+  },
+  "permission": {
+    "scope.userLocation": {
+      "desc": " "
+    }
+  }
+}

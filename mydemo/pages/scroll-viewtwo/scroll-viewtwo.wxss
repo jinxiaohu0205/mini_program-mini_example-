@@ -1,0 +1,46 @@
+/* pages/scroll-viewtwo/scroll-viewtwo.wxss */
+.scroll-view_H{
+  white-space: nowrap;
+}
+.scroll-view_H view{
+  display: inline-block;
+  width: 300rpx;
+  background:#000;
+  margin-right: 10rpx;
+  height: 100rpx;
+}
+
+.box{
+  width: 100vw;
+  white-space: nowrap;
+}
+.box::-webkit-scrollbar {display:none}
+.box view{
+  display: inline-block;
+  width: 300rpx !important;
+  margin-right: 20rpx
+}
+
+.cover1{
+  position: absolute;
+  width: 100rpx;
+  height: 100rpx;
+  top: 600rpx;
+  background: red;
+  z-index: 111;
+  
+}
+.cover2{
+  position: absolute;
+  width: 100rpx;
+  height: 100rpx;
+  top: 600rpx;
+  right: 300rpx;
+  background: blue;
+  z-index: 111;
+}
+.iamges{
+  width: 100rpx;
+  height: 100rpx;
+}
+

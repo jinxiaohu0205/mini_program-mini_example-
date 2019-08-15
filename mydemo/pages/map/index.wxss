@@ -1,0 +1,25 @@
+.page-section-gap{
+  box-sizing: border-box;
+  padding: 0 30rpx;
+}
+
+.page-body-button {
+  margin-bottom: 30rpx;
+}
+.zhe{
+  position: fixed;
+  top: 0;
+  width: 100vw;
+  height: 100vh;
+  background:rgba(0,0,0, 0.5)
+}
+.zhe cover-image,.zhe image{
+  position: absolute;
+  width: 50vw;
+  height: 50vh;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  margin: auto;
+}
