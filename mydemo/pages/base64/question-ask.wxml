@@ -41,5 +41,13 @@
 
   <!-- 提交表单按钮  -->
   <button class="weui-btn" type="primary" bindtap="submitForm">提交</button>
+  <mp-cells ext-class="my-cells" title="带说明的列表项">
+    <mp-cell value="标题文字" foot="说明文字"></mp-cell>
+    <mp-cell>
+        <view>标题文字（使用slot）</view>
+        <view slot="foot">说明文字</view>
+    </mp-cell>
+  </mp-cells>
 
+<button class="weui-btn" type="default" bindtap="openConfirm">Confirm Dialog</button>
 </view>

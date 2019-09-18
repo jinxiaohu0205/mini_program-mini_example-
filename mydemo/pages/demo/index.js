@@ -32,12 +32,13 @@ Page({
     //     console.log(res);
     //   }
     // })
+    //打开无线就可以不打开定位 但是链接流量的话就的打开定位
     // wx.getLocation({
     //   type: 'gcj02', //返回可以用于wx.openLocation的经纬度
     //   success(res) {
     //     const latitude = res.latitude
     //     const longitude = res.longitude
-    //     console.log(latitude, longitude)
+    //     console.log(res,latitude, longitude)
     //     wx.openLocation({
     //       latitude,
     //       longitude,
@@ -49,7 +50,6 @@ Page({
     //     wx.showToast({
     //       title: '请打开定位',
     //       icon: 'warn',
-
     //     })
     //   }
     // })

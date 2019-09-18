@@ -1,0 +1,15 @@
+/* pages/guige/index.wxss */
+.active{
+  background: red !important;
+}
+.act{
+  background: red !important;
+}
+.zz{
+  position: fixed;
+  width: 100%;
+  height: 350rpx;
+  background: red;
+  opacity: 0.5;
+  top: 0;
+}

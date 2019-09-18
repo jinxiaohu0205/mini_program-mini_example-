@@ -12,9 +12,26 @@ Page({
     contentCount: 0,
     title: '',
     content: '',
-    images: []
+    images: [],
+    dialogShow: false,
+    buttons: [{ text: '取消' }, { text: '确定' }],
   },
-
+  openConfirm: function () {
+    wx.showModal({
+      title: '弹窗标题',
+      content: '弹窗内容，告知当前状态、信息和解决方法，描述文字尽量控制在三行内',
+      confirmText: "主操作",
+      cancelText: "辅助操作",
+      success: function (res) {
+        console.log(res);
+        if (res.confirm) {
+          console.log('用户点击主操作')
+        } else {
+          console.log('用户点击辅助操作')
+        }
+      }
+    });
+  },
   onLoad(options) {
     $init(this)
   },
@@ -65,14 +82,15 @@ Page({
   submitForm(e) {
     const title = this.data.title
     const content = this.data.content
-
+    
     if (title && content) {
       const arr = []
       console.log(this.data.images);
       for (let path of this.data.images) {
         console.log(path)
         let base64 = 'data:image/png;base64,' + wx.getFileSystemManager().readFileSync(path, 'base64');
-        console.log(base64);
+        // let erjin = wx.getFileSystemManager().readFileSync(path, 'binary');
+        // console.log(erjin);
         // return false;
         // arr.push(wxUploadFile({
         //   url: 'http://172.16.22.148:8080/zhwts_shop/public/index.php/api/order/uploadimg1',
@@ -96,7 +114,7 @@ Page({
           },
           method: 'post',
           success(res) {
-            console.log(res.data);
+            // console.log(res.data);
           }
         })
       }

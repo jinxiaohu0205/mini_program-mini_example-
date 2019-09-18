@@ -1,0 +1,11 @@
+<!--pages/erweishuzu/index.wxml-->
+<text>pages/erweishuzu/index.wxml</text>
+
+
+<view class='item' wx:for="{{two_items}}" wx:key='{{index}}'>
+  <view class='cc' data-key='{{item.id + "-" + twodata.id }}' wx:for="{{item.events}}" wx:key='{{index}}' bindtap='clicked' wx:for-item="twodata"> 
+    <view class='{{current_item === item.id + "-" + twodata.id?"selected":"items"}}'>
+       {{twodata.detail}}
+    </view>
+  </view>
+</view>

@@ -1,3 +1,5 @@
+<import src="../template/template.wxml" />
+
 <view class="question-form">
 
   <view class="question-input-area">
@@ -40,5 +42,25 @@
 
   <!-- 提交表单按钮  -->
   <button class="weui-btn" type="primary" bindtap="submitForm">提交</button>
+  <!-- 下面这俩个是引用了vant-weapp -->
+  <van-button type="info" bindtap='van'>默认按钮</van-button>
+  <!--
+  <van-cell title="单元格" value="内容" size="large" /> 
+  <van-cell title="单元格" value="内容" size="large" label="描述信息" />
+  <van-notice-bar
+  left-icon="https://img.yzcdn.cn/1.png"
+  text="足协杯战线连续第2年上演广州德比战，上赛季半决赛上恒大以两回合5-3的总比分淘汰富力。"
+/>
+<view class="van-ellipsis">这是一段宽度限制 250px 的文字，后面的内容会省略</view> -->
+  <!-- 下面这俩个用的是微信官方的weui -->
+  <!-- <button class="weui-btn" type="primary">页面主操作 Normal</button>
+  <button class="weui-btn" type="primary" disabled="true">页面主操作 Disabled</button> -->
+  
+  <!-- 这个是简单的使用了模板 -->
+  <view class='view'>
+<!--和普通标签一样使用，is对应的是templates中的name  data是传入template值  -->
+    <template is='selectView' data="{{...jin}}" bindtap="tem"></template>
+  </view>
 
+  <demo_co bindtap="demo_co" type='green'></demo_co>
 </view>

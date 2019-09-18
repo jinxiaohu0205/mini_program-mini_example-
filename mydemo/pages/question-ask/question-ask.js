@@ -2,7 +2,7 @@ import { promisify } from '../../utils/promise.util'
 import { $init, $digest } from '../../utils/common.util'
 // import { createQuestion } from '../../services/question.service'
 // import config from '../../config'
-
+import '../../utils/alert.js'
 const wxUploadFile = promisify(wx.uploadFile)
 
 Page({
@@ -12,13 +12,22 @@ Page({
     contentCount: 0,
     title: '',
     content: '',
-    images: []
+    images: [],
+    jin:{
+      title:'jin'
+    }
   },
 
   onLoad(options) {
+    
     $init(this)
   },
-
+  clickView: function () {
+    console.log("我是template的点击方法");
+  },
+  demo_co:function(){
+    console.log('我是自定义组件')
+  },
   handleTitleInput(e) {
     const value = e.detail.value
     this.data.title = value
@@ -34,13 +43,14 @@ Page({
   },
 
   chooseImage(e) {
-    console.log(1);
+    console.log(e);
     wx.chooseImage({
       count: 3,
       sizeType: ['original', 'compressed'],
       sourceType: ['album', 'camera'],
       success: res => {
         const images = this.data.images.concat(res.tempFilePaths)
+        console.log(res);
         this.data.images = images.length <= 3 ? images : images.slice(0, 3)
         $digest(this)
       }
@@ -62,7 +72,9 @@ Page({
       urls: images,
     })
   },
-
+  van(){
+    console.log(1);
+  },
   submitForm(e) {
     console.log(1);
     const title = this.data.title
@@ -74,9 +86,12 @@ Page({
       for (let path of this.data.images) {
         console.log(path)
         arr.push(wxUploadFile({
-          url: 'http://172.16.22.148:8080/zhwts_shop/public/index.php/api/order/uploadimg1',
+          url: 'https://mall.sxzhwts.com/api/order/uploadReturnGoodsImg',
           filePath: path,
-          name: 'file',
+          name: 'image',
+          formData: {
+            'access_token': '51fb0cf03ae7abd40052ac0f0960bf1a42392908'
+          },
           success: function (res) {
             console.log(res);
           },
@@ -85,6 +100,8 @@ Page({
             console.log('接口调用失败');
           }
         }))
+
+     
       }
 
       // wx.showLoading({

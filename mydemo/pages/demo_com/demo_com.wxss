@@ -1,0 +1,7 @@
+/* pages/demo_com/demo_com.wxss */
+.green{
+  background: green;
+}
+.red{
+  background: red;
+}

@@ -1,0 +1,4 @@
+/* pages/erweishuzu/index.wxss */
+.selected{
+  background: red;
+}

@@ -1,0 +1,13 @@
+<!--pages/guige/index.wxml-->
+<view>
+  <block wx:for="{{spec}}" wx:key='*this'>
+    <view >
+     <text>{{item.name}}</text>
+      <block >
+        <button type="primary" wx:for="{{item.spec_item}}" wx:key='*this' wx:for-item="spec_item" wx:for-index="idx" class="{{subIndex[index]==idx?'active':'' }}" bindtap='jisuan'  data-index="{{index}}" data-idx="{{idx}}" id='' data-ol="{{subIndex[index]}}">{{spec_item.item}}</button>
+      </block>
+    </view>
+
+  </block>
+  <!-- <view class='zz'></view> -->
+</view>

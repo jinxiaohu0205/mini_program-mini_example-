@@ -1,14 +1,26 @@
 {
   "pages": [
+    "pages/guige/index",
+    "pages/guige_two/index",
+    
+    "pages/erweishuzu/index",
+    
+    
     "pages/base64/question-ask",
+    "pages/question-ask/question-ask",
     "pages/demo/index",
     "pages/scroll-viewtwo/scroll-viewtwo",
     "pages/index/index",
     "pages/map/index",
     "pages/logs/logs"
-    
    
   ],
+  "usingComponents": {
+    "van-button": "vant-weapp/button",
+    "van-cell": "vant-weapp/cell",
+    "van-notice-bar": "vant-weapp/notice-bar",
+    "demo_co": "pages/demo_com/demo_com"
+  },
   "window": {
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#fff",

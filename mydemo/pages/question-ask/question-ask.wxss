@@ -1,3 +1,4 @@
+@import "../template/template.wxss";
 page {
   background: #f6f7f8;
 }

@@ -1,0 +1,4 @@
+<!--pages/template.wxml-->
+<template name='selectView'>
+  <view class='tbgview' bindtap='clickView'>{{title}}</view>
+</template>

@@ -1,0 +1,8 @@
+.tbgview{
+  font-size: 30rpx;
+  width: 80rpx;
+  height: 60rpx;
+  line-height: 60rpx;
+  background: red;
+  color: #000000;
+}/* pages/template.wxss */
